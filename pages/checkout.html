@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | Alberto Watch Company</title>
+<meta name="description" content="Complete your Alberto Watch order: delivery details, cash on delivery or card payment, and a final review.">
+<meta name="theme-color" content="#102B23">
+<link rel="canonical" href="https://www.albertowatch.example/pages/checkout.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Alberto Watch Company">
+<meta property="og:title" content="Checkout | Alberto Watch Company"><meta property="og:description" content="Complete your Alberto Watch order: delivery details, cash on delivery or card payment, and a final review.">
+<meta property="og:image" content="https://www.albertowatch.example/images/e1.webp"><meta property="og:url" content="https://www.albertowatch.example/pages/checkout.html">
+<link rel="icon" href="../images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lib/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body data-page="checkout">
+<script>try{if(localStorage.getItem("alb_dark")==="1")document.body.classList.add("dark")}catch(e){}</script>
+<main id="main" tabindex="-1">
+<section class="page active" id="checkout">
+<h2 role="heading" aria-level="1">Checkout</h2><p class="sub">Four quick steps: your details, delivery, payment and a final review. Pay by cash on delivery or by card.</p>
+<div id="coEmpty" class="co-empty" hidden><span class="co-kicker">Checkout &middot; empty</span><h2>Nothing to check out</h2><p>Your cart is empty. Pick a watch you like and it will appear here.</p><a class="abtn" href="products.html">Browse watches</a></div>
+<div id="coMain" hidden>
+<ol class="co-steps" id="coSteps" aria-label="Checkout steps"></ol>
+<div class="co-grid">
+<div class="co-card" id="coCard">
+
+<!-- STEP 1: contact -->
+<div class="co-step" data-step="0">
+<span class="co-kicker">Step 1 of 4</span><h3 tabindex="-1">Your details</h3><p class="co-lead">We call or message you on this number to confirm the order.</p>
+<div class="co-row2">
+<div class="co-field"><label for="fName">Full name</label><input id="fName" autocomplete="name" placeholder="e.g. Ayesha Khan"><div class="co-err"></div></div>
+<div class="co-field"><label for="fPhone">Phone / WhatsApp</label><input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+92 300 1234567"><div class="co-err"></div></div>
+</div>
+<div class="co-field"><label for="fEmail">Email</label><input id="fEmail" type="email" autocomplete="email" placeholder="you@example.com"><div class="co-err"></div></div>
+</div>
+
+<!-- STEP 2: delivery -->
+<div class="co-step" data-step="1" hidden>
+<span class="co-kicker">Step 2 of 4</span><h3 tabindex="-1">Delivery</h3><p class="co-lead">Choose how you want to receive your watch.</p>
+<div class="co-opts" id="coMethods" role="radiogroup" aria-label="Delivery method"></div>
+<div id="coAddr">
+<button type="button" class="co-loc" id="coLoc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Use my current location</button>
+<p class="co-locnote" id="coLocNote" hidden></p>
+<div class="co-field"><label for="fAddr">Street address</label><input id="fAddr" autocomplete="street-address" placeholder="House / flat no, street, area"><div class="co-err"></div></div>
+<div class="co-row2">
+<div class="co-field"><label for="fCity">City</label><input id="fCity" autocomplete="address-level2" value="Karachi"><div class="co-err"></div></div>
+<div class="co-field"><label for="fPost">Postal code</label><input id="fPost" inputmode="numeric" autocomplete="postal-code" placeholder="75500"><div class="co-err"></div></div>
+</div>
+<div class="co-field"><label for="fLand">Landmark (optional)</label><input id="fLand" placeholder="Near a mosque, mall, school..."></div>
+</div>
+<div id="coPick" hidden><div class="co-field"><label for="fStore">Pickup store</label><select id="fStore"></select></div></div>
+<div class="co-field"><label for="fNote">Note for us (optional)</label><textarea id="fNote" rows="2" placeholder="Gift wrap, best time to call..."></textarea></div>
+</div>
+
+<!-- STEP 3: payment -->
+<div class="co-step" data-step="2" hidden>
+<span class="co-kicker">Step 3 of 4</span><h3 tabindex="-1">Payment</h3><p class="co-lead">Pay when it arrives, or pay now by card.</p>
+<div class="co-opts" role="radiogroup" aria-label="Payment method">
+<label class="co-opt"><input type="radio" name="pay" value="cod" checked><span class="dot"></span><span><b>Cash on Delivery</b><small>Pay in cash to our rider when the watch reaches you.</small></span></label>
+<label class="co-opt"><input type="radio" name="pay" value="card"><span class="dot"></span><span><b>Credit / Debit Card</b><small>Visa &middot; Mastercard &middot; UnionPay</small></span></label>
+</div>
+<div id="coCod" class="co-cod"><b>No payment needed now.</b> Keep the exact amount ready. You can open the box and check the watch before you pay.</div>
+<div id="coCardBox" class="co-cardbox" hidden>
+<button type="button" class="co-demo" id="coDemo">Fill a demo card</button>
+<div class="co-field"><label for="fCard">Card number</label><input id="fCard" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" maxlength="23"><div class="co-err"></div></div>
+<div class="co-row2">
+<div class="co-field"><label for="fExp">Expiry (MM/YY)</label><input id="fExp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5"><div class="co-err"></div></div>
+<div class="co-field"><label for="fCvc">CVC</label><input id="fCvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" maxlength="4"><div class="co-err"></div></div>
+</div>
+<div class="co-field mb-0"><label for="fHolder">Name on card</label><input id="fHolder" autocomplete="cc-name"><div class="co-err"></div></div>
+</div>
+<p class="sub mt-3 mb-0" style="font-size:.85rem">Demo website: no real payment is taken and card details are never saved.</p>
+</div>
+
+<!-- STEP 4: review -->
+<div class="co-step" data-step="3" hidden>
+<span class="co-kicker">Step 4 of 4</span><h3 tabindex="-1">Review your order</h3><p class="co-lead">Check everything once. Then place your order.</p>
+<div id="coReview"></div>
+</div>
+
+<button type="button" class="co-quick" id="coQuick"><span aria-hidden="true">&#9889;</span> Quick fill with demo details</button>
+<div class="co-nav" id="coNav"></div>
+</div>
+
+<aside class="co-card co-side" aria-label="Order summary">
+<span class="co-kicker">Order summary</span>
+<div class="co-items" id="coItems"></div>
+<div class="co-tot" id="coTot"></div>
+<ul class="co-assure"><li>2 year warranty on every watch</li><li>Checked and boxed on our bench</li><li>30 day easy returns</li></ul>
+<a class="co-editcart" href="products.html">&larr; Keep shopping</a>
+</aside>
+</div>
+</div>
+</section>
+</main>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap.bundle.min.js"></script>
+<script src="../lib/gsap.min.js"></script>
+<script src="../data/products.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/audio.js"></script>
+<script src="../js/checkout.js"></script>
+</body>
+</html>

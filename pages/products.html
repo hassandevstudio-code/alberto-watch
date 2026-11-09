@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watches &amp; Price List | Alberto Watch Company</title>
+<meta name="description" content="Browse luxury, vintage, diver, sports, ladies and smart watches with clear prices.">
+<meta name="theme-color" content="#102B23">
+<link rel="canonical" href="https://www.albertowatch.example/pages/products.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Alberto Watch Company">
+<meta property="og:title" content="Watches &amp; Price List | Alberto Watch Company"><meta property="og:description" content="Browse luxury, vintage, diver, sports, ladies and smart watches with clear prices.">
+<meta property="og:image" content="https://www.albertowatch.example/images/e1.webp"><meta property="og:url" content="https://www.albertowatch.example/pages/products.html">
+<link rel="icon" href="../images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lib/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="products">
+<script>try{if(localStorage.getItem("alb_dark")==="1")document.body.classList.add("dark")}catch(e){}</script>
+<main id="main" tabindex="-1">
+<section class="page active" id="products">
+<h2 role="heading" aria-level="1">Products</h2><p class="sub">Choose a line-up to see every watch and clock in it.</p>
+<div class="bar"><input aria-label="Search products" id="q" placeholder="Search watches and clocks"/><select aria-label="Sort" id="sort"><option value="f">Featured</option><option value="a">Price: low to high</option><option value="d">Price: high to low</option></select><input aria-label="Lowest price" id="pmin" type="number" min="0" placeholder="Min $"/><input aria-label="Highest price" id="pmax" type="number" min="0" placeholder="Max $"/></div><p class="sub" id="pcount" style="margin:-4px 0 12px"></p>
+<div class="tabs" id="tabs"></div>
+<div class="row g-4" id="plist"></div>
+<div class="tblwrap"><h2 style="margin-bottom:10px">Price list</h2>
+<table><thead><tr><th>Product</th><th>Line-up</th><th>Price (USD)</th></tr></thead><tbody id="ptable"></tbody></table></div>
+</section>
+</main>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap.bundle.min.js"></script>
+<script src="../data/products.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

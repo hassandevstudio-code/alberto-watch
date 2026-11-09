@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Watch Repair | Alberto Watch Company</title>
+<meta name="description" content="Book a repair or appraisal slot at an Alberto store and confirm on WhatsApp.">
+<meta name="theme-color" content="#102B23">
+<link rel="canonical" href="https://www.albertowatch.example/pages/booking.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Alberto Watch Company">
+<meta property="og:title" content="Book a Watch Repair | Alberto Watch Company"><meta property="og:description" content="Book a repair or appraisal slot at an Alberto store and confirm on WhatsApp.">
+<meta property="og:image" content="https://www.albertowatch.example/images/e1.webp"><meta property="og:url" content="https://www.albertowatch.example/pages/booking.html">
+<link rel="icon" href="../images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lib/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="booking">
+<script>try{if(localStorage.getItem("alb_dark")==="1")document.body.classList.add("dark")}catch(e){}</script>
+<main id="main" tabindex="-1">
+<section class="page active" id="booking">
+<h2 role="heading" aria-level="1">Book a Repair</h2><p class="sub">Pick a store, date and time. Your request opens in WhatsApp and we confirm the slot there.</p>
+<div class="acard info bk"><form id="bkForm" novalidate>
+<div class="row g-3">
+<div class="col-md-6"><label for="bkName">Your name</label><input id="bkName" class="form-control" required minlength="2" autocomplete="name"><div class="invalid-feedback">Please enter your name.</div></div>
+<div class="col-md-6"><label for="bkPhone">Phone / WhatsApp</label><input id="bkPhone" class="form-control" type="tel" required pattern="[0-9+ \(\)\-]{7,}" autocomplete="tel" placeholder="+92 300 1234567"><div class="invalid-feedback">Enter a valid phone number.</div></div>
+<div class="col-md-6"><label for="bkWatch">Watch brand and model</label><input id="bkWatch" class="form-control" required placeholder="e.g. Citizen Eco-Drive"><div class="invalid-feedback">Tell us which watch.</div></div>
+<div class="col-md-6"><label for="bkSvc">Service</label><select id="bkSvc" class="form-select" required><option value="">Choose a service</option><option>Battery change</option><option>Strap change</option><option>Full movement service</option><option>Glass / crystal</option><option>Water resistance test</option><option>Appraisal</option><option>Other</option></select><div class="invalid-feedback">Choose a service.</div></div>
+<div class="col-md-4"><label for="bkStore">Store</label><select id="bkStore" class="form-select" required></select></div>
+<div class="col-md-4"><label for="bkDate">Date</label><input id="bkDate" class="form-control" type="date" required><div class="invalid-feedback" id="bkDateMsg">Choose a date.</div></div>
+<div class="col-md-4"><label for="bkTime">Time</label><select id="bkTime" class="form-select" required></select></div>
+<div class="col-12"><label for="bkNote">What is wrong? (optional)</label><textarea id="bkNote" class="form-control" rows="3" placeholder="Stopped working, loses time, cracked glass..."></textarea></div>
+</div>
+<button class="abtn mt-3" type="submit">Book on WhatsApp</button>
+</form>
+<div class="bk-ok" id="bkOk" role="status"><b>Almost done.</b> If WhatsApp did not open, <a id="bkLink" target="_blank" rel="noopener"><u>tap here to send your request</u></a>.</div></div>
+</section>
+</main>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap.bundle.min.js"></script>
+<script src="../data/products.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

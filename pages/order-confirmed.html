@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmed | Alberto Watch Company</title>
+<meta name="description" content="Your Alberto Watch order is confirmed. Print, tear off and view your receipt in 3D.">
+<meta name="theme-color" content="#102B23">
+<link rel="canonical" href="https://www.albertowatch.example/pages/order-confirmed.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Alberto Watch Company">
+<meta property="og:title" content="Order Confirmed | Alberto Watch Company"><meta property="og:description" content="Your Alberto Watch order is confirmed. Print, tear off and view your receipt in 3D.">
+<meta property="og:image" content="https://www.albertowatch.example/images/e1.webp"><meta property="og:url" content="https://www.albertowatch.example/pages/order-confirmed.html">
+<link rel="icon" href="../images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lib/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body data-page="order-confirmed">
+<script>try{if(localStorage.getItem("alb_dark")==="1")document.body.classList.add("dark")}catch(e){}</script>
+<main id="main" tabindex="-1">
+<section class="page active" id="order-confirmed">
+<h2 role="heading" aria-level="1">Order confirmed</h2><p class="sub">Thank you. Your receipt is printing below. Tear it off to keep it, or open it in 3D.</p>
+<div id="rpNone" class="co-empty" hidden><span class="co-kicker">Receipt &middot; none</span><h2>No recent order</h2><p>Place an order and your printed receipt will appear on this page.</p><a class="abtn" href="products.html">Browse watches</a></div>
+<div id="rpPage" class="rp-page" hidden>
+<div class="rp-backdrop" aria-hidden="true"><span class="rp-gridbg"></span><span class="rp-spot"></span><span class="rp-glow"></span><span class="rp-pulse"></span><span class="rp-pulse"></span><span class="rp-pulse"></span></div>
+<div class="rp-wrap">
+<div class="rp-grid3">
+<span class="d-none d-md-block" aria-hidden="true"></span>
+<div class="rp-fit" id="rpFit"><div class="rp-scaler" id="rpScaler"><div class="rp-stage" id="rpStage">
+<div class="rp-printer" role="status" aria-live="polite" id="rpPrinter"><span class="rp-brand">ALBERTO // TP-58</span><span class="rp-led" id="rpLed"></span><div class="rp-screen"><span id="rpRef"></span><b id="rpState">WARMING UP</b></div><div class="rp-slot"></div></div>
+<div class="rp-tray"><div class="rp-box" id="rpBox" role="button" tabindex="0" aria-label="Order receipt - open 3D view"><div class="rp-paper" id="rpPaper"></div></div></div>
+</div></div></div>
+<div class="rp-ctl"><div class="rp-ctlin" role="group" aria-label="Receipt printer controls">
+<button type="button" class="rp-btn primary" id="rpTear"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg>Tear off</button>
+<button type="button" class="rp-btn" id="rpView"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="rpViewTxt">View 3D</span></button>
+<button type="button" class="rp-btn" id="rpDl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>Download</button>
+<button type="button" class="rp-btn" id="rpAgain"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/></svg>Print again</button>
+<button type="button" class="rp-btn wide" id="rpSound" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path id="rpSoundWave" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg><span id="rpSoundTxt">Sound off</span></button>
+</div></div>
+</div>
+<div class="rp-after"><a class="abtn" href="products.html">Continue shopping</a><a class="abtn ghost" href="../index.html">Return home</a></div>
+</div>
+</div>
+</section>
+</main>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap.bundle.min.js"></script>
+<script src="../lib/gsap.min.js"></script>
+<script src="../data/products.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/audio.js"></script>
+<script src="../js/receipt.js"></script>
+</body>
+</html>
